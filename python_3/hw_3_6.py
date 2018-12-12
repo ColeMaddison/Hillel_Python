@@ -14,9 +14,30 @@
 # Note that neither "test" nor "?xy1" is a valid password, because "?" is not an alphanumerical character 
 # and "test" contains an even number of digits (zero).
 
+from re import match, findall
+from string import ascii_letters, digits
+
 string = "test 5 a0A pass007 ?xy1"
 
-def validate_pass(string):
-    pass
+# solution 1
+def validate_pass_1(string):
+    matched = []
+    for s in string.split(' '):
+        letters = 0
+        nums = 0
+        for symbol in s:
+            if symbol in ascii_letters:
+                letters += 1
+            elif symbol in digits:
+                nums += 1
+        if letters%2 == 0 and nums%2 == 1 and match('[0-9a-zA-Z]', s):
+            matched.append(s)
+    return matched
 
-print(validate_pass(string))
+
+# solution 2
+def validate_pass_2(string):
+    return [s for s in string.split(' ') if len(findall('[0-9]', s))%2 == 1 and len(findall('[a-zA-Z]', s))%2 == 0 and match('[0-9a-zA-Z]', s)]
+
+print(validate_pass_1(string))
+print(validate_pass_2(string))
