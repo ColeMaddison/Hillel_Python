@@ -6,7 +6,13 @@ from functools import reduce
 
 number = 123405
 
+# def count_prod(number):
+#     return reduce((lambda x, y: (int(x) * int(y))), list(filter(lambda i: int(i)!=0, str(number))))
+
 def count_prod(number):
-    return reduce((lambda x, y: (int(x) * int(y))), list(filter(lambda i: int(i)!=0, str(number))))
+    res = 1
+    for d in str(number):
+        res *= int(d) if int(d) else 1
+    return res
 
 print(count_prod(number))
