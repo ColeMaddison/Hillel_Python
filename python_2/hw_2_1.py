@@ -36,7 +36,8 @@ def list_group_city(data):
     list_groupped = []
     data.sort(key=lambda item: item['city'])
     for key, group in groupby(data, lambda x: x['city']):
-        list_groupped.append({key: list({k: i[k] for k in i.keys() if not k == 'city'} for i in group)})
+        group_condition = list({k: i[k] for k in i.keys() if not k == 'city'} for i in group)
+        list_groupped.append({key: group_condition})
     return list_groupped
 
 print(pformat(list_group_city(data)))
