@@ -17,12 +17,12 @@ a_4 = [-1000000]
 
 
 def solution(a): 
-    integer = max(a) + 1
-    while(integer not in a):
-        if integer > 0:
-            return integer
-        else: 
+    integer = 1
+    for x in range(len(a) + 1): #needed +1 if the biigest in is the last
+        if integer in a:
             integer += 1
+        else:
+            return integer
 
 
 print(solution(a_1))
