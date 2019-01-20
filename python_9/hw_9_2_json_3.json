@@ -1,0 +1,45 @@
+{
+    "_id": "5c40c445b7d8450c57fa1b2e",
+    "index": 0,
+    "guid": "629a0017-32e2-4e5d-9349-8f7eec118950",
+    "isActive": false,
+    "balance": "$3,613.42",
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "eyeColor": "brown",
+    "name": "Dianna Mills",
+    "gender": "female",
+    "company": "BOILCAT",
+    "email": "diannamills@boilcat.com",
+    "phone": "+1 (824) 578-3744",
+    "address": "454 Hinsdale Street, Cannondale, Alabama, 3611",
+    "about": "Ut mollit nulla laboris non sit sunt. In irure cupidatat excepteur in excepteur in. Deserunt id sunt anim excepteur deserunt magna ullamco. Minim incididunt non ullamco deserunt. Esse elit minim esse eiusmod enim anim ipsum dolore est irure minim aute. Sunt amet et deserunt ipsum.\r\n",
+    "registered": "2018-01-15T03:20:27 -02:00",
+    "latitude": -32.028171,
+    "longitude": 54.235692,
+    "tags": [
+        "qui",
+        "minim",
+        "do",
+        "cupidatat",
+        "aliqua",
+        "sit",
+        "proident"
+    ],
+    "friends": [
+        {
+            "id": 0,
+            "name": "Loraine Fleming"
+        },
+        {
+            "id": 1,
+            "name": "Myers Brock"
+        },
+        {
+            "id": 2,
+            "name": "Shields Steele"
+        }
+    ],
+    "greeting": "Hello, Dianna Mills! You have 2 unread messages.",
+    "favoriteFruit": "apple"
+}
