@@ -84,4 +84,4 @@ user = User()
 user.name = 'i'
 print(user.name)
 
-user.i = 10
+# user.i = 10
