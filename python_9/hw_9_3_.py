@@ -85,4 +85,3 @@ switcher.get_login
 switcher.get_mac_address
 switcher.get_password
 switcher.get_unit_name
-
