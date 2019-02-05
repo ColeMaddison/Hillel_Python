@@ -8,9 +8,7 @@ from os import chdir, getcwd
 def cd(file_path, exc):
     try:
         print(getcwd())
-        
         yield chdir(file_path)
-        # print(getcwd())
     except Exception as e:
         if(type(e).__name__ == exc.__name__):
             print('error caught')
