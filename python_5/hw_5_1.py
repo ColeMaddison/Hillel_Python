@@ -18,7 +18,7 @@
 from collections import OrderedDict
 from functools import wraps
 
-def lru_cache(max_size):
+def lru_cache(max_size, typed):
     def decor(my_func):
         cache = OrderedDict()
         info = {'hits': 0, 'misses': 0}
@@ -39,6 +39,7 @@ def lru_cache(max_size):
                     info['misses'] += 1
                     cache.popitem(0)
                     cache[arg] = my_func(arg)
+                    # print([*cache.keys()])
                     return my_func(arg)
 
         def cache_info():
@@ -54,7 +55,7 @@ def lru_cache(max_size):
         return wrapper
     return decor
 
-@lru_cache(max_size = 2)
+@lru_cache(max_size = 2, typed = False)
 def my_func(arg):
     return arg + 1
 
