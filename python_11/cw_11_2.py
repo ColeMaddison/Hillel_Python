@@ -9,7 +9,7 @@ from datetime import timedelta
 class TimeManager(object):
     def __init__(self, h, m, s):
         try:
-            if h in range(23) and m in range(59) and s in range(59):
+            if h in range(24) and m in range(60) and s in range(60):
                 self.h = h
                 self.m = m
                 self.s = s
@@ -25,7 +25,7 @@ class TimeManager(object):
     
     @property
     def hours(self):
-        return self.h
+        return self.date.hour
     
     @hours.setter
     def hours(self, new_hour):
@@ -33,7 +33,7 @@ class TimeManager(object):
     
     @property
     def minutes(self):
-        return self.m
+        return self.date.minute
     
     @minutes.setter
     def minutes(self, new_minutes):
@@ -41,13 +41,13 @@ class TimeManager(object):
     
     @property
     def seconds(self):
-        return self.s
+        return self.date.second
     
     @seconds.setter
     def seconds(self, new_seconds):
         self.date += timedelta(seconds=new_seconds)
 
-timing = TimeManager(21, 4, 13)
+timing = TimeManager(23, 4, 13)
 print(timing.get_current_time)
 timing.hours = 5
 print(timing.hours)
