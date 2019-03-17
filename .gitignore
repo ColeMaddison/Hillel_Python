@@ -1,3 +1,5 @@
 .vscode
 ./python_9/cw_9_1.py
 .venv
+tutorial/.pytut
+snippets/.snip
